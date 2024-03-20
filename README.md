@@ -2,9 +2,9 @@
 
 For using news fetch apis you need to add this envirenment variable with your own api keys
 
-REACT_APP_GUARDIAN_API_KEY = <Your guardian api-key> [https://open-platform.theguardian.com/access/]
-REACT_APP_NYTIMES_API_KEY = <Your nytimes api-key> [https://developer.nytimes.com/get-started]
-REACT_APP_NEWSAPI_API_KEY = <Your newsapi api-key> [https://newsapi.org/account]
+REACT_APP_GUARDIAN_API_KEY = <your guardian api-key> [https://open-platform.theguardian.com/access/]
+REACT_APP_NYTIMES_API_KEY = <your nytimes api-key> [https://developer.nytimes.com/get-started]
+REACT_APP_NEWSAPI_API_KEY = <your newsapi api-key> [https://newsapi.org/account]
 
 !!! Make sure that you re-run the application if the envirenment variables don't work !!!
 
