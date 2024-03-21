@@ -1,30 +1,8 @@
-import {
-  GUARDIAN_API_URL,
-  NEWS_API_URL,
-  NYTIMES_API_URL,
-} from "../constants/url.constants";
+import { NEWS_URL } from "../constants/url.constants";
 
-export const fetchNYTArticles = async (query) => {
+export const fetchNews = async (api, query = "&q=developer") => {
   try {
-    const response = await fetch(NYTIMES_API_URL);
-    return response;
-  } catch (error) {
-    throw error;
-  }
-};
-export const fetchGuardianArticles = async (query) => {
-  try {
-    const response = await fetch(GUARDIAN_API_URL + query);
-    return response;
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const fetchNewsArticles = async (query) => {
-  try {
-    const response = await fetch(NEWS_API_URL + query);
-    return response;
+    return await fetch(`${NEWS_URL[api]}${query}`);
   } catch (error) {
     throw error;
   }

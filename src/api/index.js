@@ -1,7 +1,3 @@
 import "./fetch/instance";
 
-export {
-  fetchNYTArticles,
-  fetchGuardianArticles,
-  fetchNewsArticles,
-} from "./news";
+export { fetchNews } from "./news";
