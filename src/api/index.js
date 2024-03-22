@@ -1,3 +1,3 @@
-import "./fetch/instance";
+import "./instance";
 
-export { fetchNews } from "./news";
+export { fetchNews } from "./services/news";

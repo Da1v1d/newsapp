@@ -1,10 +1,21 @@
-import "./App.css";
-import { fetchNews } from "./api";
+import { useEffect } from "react";
+import { Articles } from "./pages/Articles";
+import { controller } from "./api/abortController";
 
 function App() {
-  console.log(process.env.REACT_APP_GUARDIAN_API_KEY);
-  fetchNews("news").then((a) => console.log(a));
-  return <div className="App"></div>;
+  useEffect(() => {
+    // abort our fetch request when unmounted
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
+  return (
+    <div className="container">
+      <h1>News App</h1>
+      <Articles />
+    </div>
+  );
 }
 
 export default App;
