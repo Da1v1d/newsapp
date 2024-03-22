@@ -1,5 +1,7 @@
-import { NEWS_URL } from "../../constants/news";
-import { Badge } from "../Badge";
+import { Badge } from "components/Badge";
+
+import { NEWS_URL } from "constants/news";
+
 import "./style.css";
 
 export const ChooseDataSource = ({
@@ -10,7 +12,7 @@ export const ChooseDataSource = ({
     <>
       <h2> Choose Data source </h2>
       <div className="choose_data_source">
-        {Object.entries(NEWS_URL).map(([name, value]) => {
+        {Object.entries(NEWS_URL).map(([name, { queryParams }]) => {
           return (
             <Badge
               key={name}
@@ -18,12 +20,11 @@ export const ChooseDataSource = ({
               onClick={() =>
                 setSelectedDataSource({
                   name,
-                  queryParams: { ...value.queryParams },
+                  queryParams,
                 })
               }
             >
               {name}
-              {/* <img height="24" src={value.img} alt={name} /> */}
             </Badge>
           );
         })}

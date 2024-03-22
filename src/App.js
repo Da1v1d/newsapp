@@ -1,6 +1,9 @@
+import { Articles } from "pages/Articles";
 import { useEffect } from "react";
-import { Articles } from "./pages/Articles";
-import { controller } from "./api/abortController";
+
+import { controller } from "api/abortController";
+
+import "./index.css";
 
 function App() {
   useEffect(() => {
