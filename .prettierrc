@@ -1,11 +1,14 @@
 {
   "importOrder": [
+    "^api",
     "^pages/(.*)$",
     "^components/(.*)$",
-    "^api/(.*)$",
     "^constants/(.*)$",
-    "^@ui/(.*)$",
-    "^[./]"
+    "^hooks",
+    "^utils",
+    "(.css)$",
+    "./",
+    "^assets/(.*)$"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,

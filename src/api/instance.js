@@ -8,6 +8,9 @@ window.fetch = async (...args) => {
     signal: controller.signal,
     ...options,
   });
+  if (!response.ok) {
+    throw Error("Something went wrong");
+  }
   const data = response.json();
   return data;
 };

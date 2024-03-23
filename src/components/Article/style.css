@@ -1,0 +1,23 @@
+.article {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: black;
+  color: white;
+  min-height: 120px;
+  border-radius: 12px;
+  animation-name: example;
+  animation-duration: 0.7s;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-decoration: none;
+}
+
+@keyframes example {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}

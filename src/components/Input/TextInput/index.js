@@ -7,9 +7,15 @@ export const TextInputs = () => {
         placeholder="search"
         required
         type="text"
-        onChange={e => console.log(e)}
+        name="search"
+        onChange={() => {}}
       />
-      <input placeholder="author" type="text" onChange={e => console.log(e)} />
+      <input
+        placeholder="author"
+        type="text"
+        name="author"
+        onChange={() => {}}
+      />
     </div>
   );
 };

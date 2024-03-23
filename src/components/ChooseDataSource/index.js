@@ -4,10 +4,7 @@ import { NEWS_URL } from "constants/news";
 
 import "./style.css";
 
-export const ChooseDataSource = ({
-  selectedDataSource,
-  setSelectedDataSource,
-}) => {
+export const ChooseDataSource = ({ dataSource, setDataSource }) => {
   return (
     <>
       <h2> Choose Data source </h2>
@@ -16,9 +13,9 @@ export const ChooseDataSource = ({
           return (
             <Badge
               key={name}
-              condition={selectedDataSource.name === name}
+              condition={dataSource.name === name}
               onClick={() =>
-                setSelectedDataSource({
+                setDataSource({
                   name,
                   queryParams,
                 })

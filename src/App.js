@@ -1,22 +1,13 @@
-import { Articles } from "pages/Articles";
-import { useEffect } from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "routes/router";
 
-import { controller } from "api/abortController";
-
-import "./index.css";
+import "index.css";
 
 function App() {
-  useEffect(() => {
-    // abort our fetch request when unmounted
-    return () => {
-      controller.abort();
-    };
-  }, []);
-
   return (
     <div className="container">
       <h1>News App</h1>
-      <Articles />
+      <RouterProvider router={router} />
     </div>
   );
 }
