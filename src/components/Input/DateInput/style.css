@@ -35,14 +35,3 @@
 .date_input > input:hover {
   cursor: text;
 }
-
-@media (max-width: 490px) {
-  .date_inputs {
-    justify-content: space-around;
-    gap: 40px;
-  }
-
-  .date_input p {
-    font-size: 16px;
-  }
-}

@@ -10,23 +10,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 .container {
   max-width: 1440px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 
 h1 {
   font-size: 46px;
 }
 
-@media (max-width: 490px) {
+main {
+  min-height: 400px;
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (max-width: 571px) {
   .container {
-    padding: 10px;
+    padding: 0 10px;
   }
   h1 {
-    font-size: 62px;
+    font-size: 86px;
     text-align: center;
+    margin-top: 20px;
+  }
+  main {
+    min-height: -webkit-fill-available;
   }
 }

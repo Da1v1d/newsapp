@@ -4,10 +4,16 @@ export const Button = ({
   children,
   size = "md",
   variant = "default",
+  type = "button",
+  customClass,
   ...props
 }) => {
   return (
-    <button className={`button ${variant} ${size}`} {...props}>
+    <button
+      type={type}
+      className={`button ${variant} ${size} ${customClass}`}
+      {...props}
+    >
       {children}
     </button>
   );

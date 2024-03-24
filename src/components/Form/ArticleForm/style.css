@@ -5,12 +5,37 @@ form {
   margin-top: 20px;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 571px) {
   div {
     justify-content: center;
   }
 
   .button {
     max-width: 100%;
+  }
+  .date_inputs {
+    justify-content: space-between;
+  }
+
+  .date_inputs input {
+    font-size: 16px;
+  }
+
+  .date_input p {
+    font-size: 22px;
+  }
+
+  .search_input {
+    flex-direction: column;
+  }
+
+  .search_input input[type="text"]::placeholder,
+  .filters input[type="text"]::placeholder {
+    font-size: 28px;
+  }
+  .search_input input[type="text"],
+  .filters input[type="text"] {
+    height: 80px;
+    font-size: 28px;
   }
 }

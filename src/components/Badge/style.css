@@ -1,11 +1,11 @@
 .badge {
   border: 2px solid black;
   width: max-content;
-  padding: 5px 14px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
+  border-radius: 12px;
   cursor: pointer;
   background-color: transparent;
   transition: background 0.3s;
@@ -16,8 +16,8 @@
   color: white;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 571px) {
   .badge {
-    font-size: 22px;
+    font-size: 24px;
   }
 }

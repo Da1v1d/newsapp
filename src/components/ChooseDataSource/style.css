@@ -1,6 +1,7 @@
 .choose_data_source {
   display: flex;
   gap: 15px;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -13,11 +14,8 @@
   .choose_data_source {
     flex-direction: column;
   }
-}
-
-@media (max-width: 490px) {
   h2 {
-    text-align: center;
+    font-size: 36px;
   }
   .choose_data_source_options {
     justify-content: center;

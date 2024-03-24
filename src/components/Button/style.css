@@ -25,14 +25,14 @@
 }
 
 .md {
-  padding: 12px;
+  padding: 12px 58px;
 }
 .lg {
-  padding: 16px;
+  padding: 16px 64px;
 }
 
 .sm {
-  padding: 4px;
+  padding: 4px 24px;
 }
 
 .circle.sm {

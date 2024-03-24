@@ -61,10 +61,10 @@ export const NEWS_URL = {
       id: "id",
       img: "urlToImage",
       author: "author",
-      content: "content",
+      content: "description",
     },
     meta: {
-      total: data => data.totalResults,
+      total: data => data?.totalResults,
     },
     queryParams: {
       search: "&q=",

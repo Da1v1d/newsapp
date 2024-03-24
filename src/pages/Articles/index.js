@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Articles } from "components/Articles";
-import { ChooseDataSource } from "components/ChooseDataSource";
+import { Component } from "components/Component";
 import { ArticleForm } from "components/Form/ArticleForm";
 import { Pagination } from "components/Pagination";
 
@@ -21,29 +21,46 @@ export const ArticlesPage = () => {
     },
   });
 
-  const { data, submit, error, loading, fetchData } = useFetchNews(
+  const { data, submit, error, loading, fetchData, setData } = useFetchNews(
     dataSource.name,
     ["from", "to", "search", "author"],
   );
 
+  useEffect(() => {
+    setData(null);
+  }, [dataSource]); // eslint-disable-line
+
   return (
     <>
-      <ChooseDataSource setDataSource={setDataSource} dataSource={dataSource} />
-      <ArticleForm onSubmit={submit} />
-      <div>
-        {loading && "Loading..."}
-        {!!error && error.toString().replace("Error: ", "")}
-        {data && (
+      <ArticleForm
+        isFetched={!!NEWS_URL[dataSource.name].entryData(data)?.length}
+        onSubmit={submit}
+        setDataSource={setDataSource}
+        dataSource={dataSource}
+      />
+      <main>
+        <Component
+          loading={loading}
+          error={error}
+          condition={
+            !!data && !!NEWS_URL[dataSource.name].entryData(data)?.length
+          }
+        >
           <>
-            <Articles data={data} dataSource={dataSource.name} />{" "}
+            <Articles
+              loading={loading}
+              data={data}
+              dataSource={dataSource.name}
+            />
+
             <Pagination
               total={NEWS_URL[dataSource.name].meta.total(data)}
               dataSource={dataSource.name}
               fetchData={fetchData}
             />
           </>
-        )}
-      </div>
+        </Component>
+      </main>
     </>
   );
 };

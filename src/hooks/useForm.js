@@ -1,13 +1,19 @@
 import { NEWS_URL } from "constants/news";
 
-export const useForm = (api, fields) => {
+export const useForm = (dataSource, fields) => {
   const createQueryParams = e => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const urlQueryParams = fields.reduce((string, field) => {
-      const fieldData = formData.get(field);
+      let fieldData = formData.get(field);
+
       if (fieldData) {
-        return string + `${NEWS_URL[api].queryParams[field]}${fieldData}`;
+        if (dataSource === "nytimes" && (field === "from" || field === "to")) {
+          fieldData = fieldData?.replaceAll("-", "");
+        }
+        return (
+          string + `${NEWS_URL[dataSource].queryParams[field]}${fieldData}`
+        );
       } else return string;
     }, "");
 

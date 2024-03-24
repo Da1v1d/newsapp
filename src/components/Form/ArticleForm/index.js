@@ -1,17 +1,22 @@
-import { Button } from "components/Button";
-import { DateInputs } from "components/Input/DateInput";
-import { TextInputs } from "components/Input/TextInput";
+import { ChooseDataSource } from "components/ChooseDataSource";
+import { NewsFilter } from "components/FIlter/News";
+import { SearchInput } from "components/Input/SearchInput";
 
 import "./style.css";
 
-export const ArticleForm = ({ onSubmit }) => {
+export const ArticleForm = ({
+  onSubmit,
+  setDataSource,
+  dataSource,
+  isFetched,
+}) => {
   return (
-    <form onSubmit={onSubmit}>
-      <TextInputs />
-      <DateInputs />
-      <Button type="submit">
-        <img alt="search" src={require("assets/icons/search.png")} />
-      </Button>
-    </form>
+    <>
+      <ChooseDataSource setDataSource={setDataSource} dataSource={dataSource} />
+      <form onSubmit={onSubmit}>
+        <SearchInput />
+        {isFetched && <NewsFilter />}
+      </form>
+    </>
   );
 };
