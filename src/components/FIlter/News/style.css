@@ -13,15 +13,21 @@
   gap: 20px;
 }
 
-@media (max-width: 785px) {
+@media (max-width: 600px) {
   .filters {
     flex-direction: column;
-    align-items: flex-start;
   }
-}
+  .filter_action {
+    width: 100%;
+    flex-direction: column;
+  }
 
-@media (max-width: 571px) {
-  .filters {
-    align-items: unset;
+  .filters input[type="text"]::placeholder {
+    font-size: 28px;
+  }
+
+  .filters input[type="text"] {
+    height: 80px;
+    font-size: 28px;
   }
 }

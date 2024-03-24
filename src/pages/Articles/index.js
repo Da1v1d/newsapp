@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Articles } from "components/Articles";
-import { Component } from "components/Component";
+import { ConditionalContainer } from "components/ConditionalContainer";
 import { ArticleForm } from "components/Form/ArticleForm";
 import { Pagination } from "components/Pagination";
 
@@ -39,7 +39,7 @@ export const ArticlesPage = () => {
         dataSource={dataSource}
       />
       <main>
-        <Component
+        <ConditionalContainer
           loading={loading}
           error={error}
           condition={
@@ -59,7 +59,7 @@ export const ArticlesPage = () => {
               fetchData={fetchData}
             />
           </>
-        </Component>
+        </ConditionalContainer>
       </main>
     </>
   );

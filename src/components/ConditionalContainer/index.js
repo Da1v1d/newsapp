@@ -2,7 +2,12 @@ import { Loader } from "components/Loader";
 
 import { showErrorText } from "utils";
 
-export const Component = ({ children, loading, error, condition }) => {
+export const ConditionalContainer = ({
+  children,
+  loading,
+  error,
+  condition,
+}) => {
   return (
     <>
       {loading && <Loader />}

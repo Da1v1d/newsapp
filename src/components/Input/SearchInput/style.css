@@ -29,3 +29,17 @@ input[type="text"]::placeholder {
 .search {
   min-width: 120px;
 }
+
+@media (max-width: 600px) {
+  .search_input {
+    flex-direction: column;
+  }
+
+  .search_input input[type="text"]::placeholder {
+    font-size: 28px;
+  }
+  .search_input input[type="text"] {
+    height: 80px;
+    font-size: 28px;
+  }
+}

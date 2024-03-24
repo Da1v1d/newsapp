@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 600px) {
   .article {
     flex-direction: column;
     min-height: 280px;
@@ -25,6 +25,12 @@
 
   .article p {
     font-size: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5; 
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 

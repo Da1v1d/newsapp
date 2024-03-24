@@ -12,8 +12,14 @@ export const ArticleForm = ({
 }) => {
   return (
     <>
-      <ChooseDataSource setDataSource={setDataSource} dataSource={dataSource} />
       <form onSubmit={onSubmit}>
+        <h1>News App</h1>
+
+        <ChooseDataSource
+          setDataSource={setDataSource}
+          dataSource={dataSource}
+        />
+
         <SearchInput />
         {isFetched && <NewsFilter />}
       </form>

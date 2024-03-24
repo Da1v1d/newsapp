@@ -15,11 +15,12 @@ body {
 .container {
   max-width: 1440px;
   margin: auto;
-  padding: 20px 20px 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 h1 {
-  font-size: 46px;
+  font-size: 52px;
 }
 
 main {
@@ -28,16 +29,14 @@ main {
   position: relative;
 }
 
-@media (max-width: 571px) {
+@media (max-width: 600px) {
   .container {
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   h1 {
     font-size: 86px;
     text-align: center;
     margin-top: 20px;
-  }
-  main {
-    min-height: -webkit-fill-available;
   }
 }

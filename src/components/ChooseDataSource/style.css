@@ -10,14 +10,26 @@
   gap: 10px;
 }
 
-@media (max-width: 571px) {
+@media (max-width: 600px) {
   .choose_data_source {
     flex-direction: column;
   }
   h2 {
     font-size: 36px;
+    text-align: center;
   }
   .choose_data_source_options {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .choose_data_source_options {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .choose_data_source_options .badge {
+    width: 100%;
   }
 }

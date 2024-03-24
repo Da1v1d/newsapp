@@ -1,4 +1,4 @@
-.circle_loading {
+.loading {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
   z-index: 2;
 }
 
-.circle {
+.circle_loader {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -17,17 +17,17 @@
   animation: spin 1s linear infinite;
 }
 
-main:has(.blur) .circle {
+main:has(.blur) .circle_loader {
   border-top-color: white;
 }
 
-@media (max-width: 571px) {
-  .circle_loading {
+@media (max-width: 600px) {
+  .loading {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: -webkit-fill-availables;
     width: 100%;
     z-index: 2;
   }

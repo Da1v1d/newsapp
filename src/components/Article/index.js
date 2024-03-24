@@ -9,8 +9,12 @@ export const Article = ({ article, img, fields }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <img width={60} src={img} alt="no" />
-        <p>{article[fields.content]}</p>
+        <img width={60} src={img} alt="news_img" />
+        <p>
+          {article[fields.content]
+            ? article[fields.content]
+            : "No provided content"}
+        </p>
       </a>
     </article>
   );

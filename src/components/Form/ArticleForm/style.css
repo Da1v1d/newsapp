@@ -1,41 +1,17 @@
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
   gap: 20px;
   margin-top: 20px;
 }
 
-@media (max-width: 571px) {
-  div {
-    justify-content: center;
-  }
-
+@media (max-width: 600px) {
   .button {
     max-width: 100%;
   }
-  .date_inputs {
-    justify-content: space-between;
-  }
-
-  .date_inputs input {
-    font-size: 16px;
-  }
-
-  .date_input p {
-    font-size: 22px;
-  }
-
-  .search_input {
-    flex-direction: column;
-  }
-
-  .search_input input[type="text"]::placeholder,
-  .filters input[type="text"]::placeholder {
-    font-size: 28px;
-  }
-  .search_input input[type="text"],
-  .filters input[type="text"] {
-    height: 80px;
-    font-size: 28px;
+  form {
+    align-items: unset;
   }
 }

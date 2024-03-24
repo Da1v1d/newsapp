@@ -1,9 +1,9 @@
 import "./style.css";
 
-export const Badge = ({ children, onClick, condition }) => {
+export const Badge = ({ children, onClick, selected }) => {
   return (
     <div
-      className={`badge ${condition ? "selected_badge" : ""}`}
+      className={`badge ${selected ? "selected_badge" : ""}`}
       onClick={onClick}
     >
       {children}

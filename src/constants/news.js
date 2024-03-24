@@ -58,7 +58,7 @@ export const NEWS_URL = {
     dataFields: {
       title: "title",
       url: "url",
-      id: "id",
+      id: "publishedAt",
       img: "urlToImage",
       author: "author",
       content: "description",

@@ -16,8 +16,8 @@
   color: white;
 }
 
-@media (max-width: 571px) {
+@media (max-width: 600px) {
   .badge {
-    font-size: 24px;
+    font-size: 32px;
   }
 }

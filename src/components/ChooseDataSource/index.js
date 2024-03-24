@@ -13,7 +13,7 @@ export const ChooseDataSource = ({ dataSource, setDataSource }) => {
           return (
             <Badge
               key={name}
-              condition={dataSource.name === name}
+              selected={dataSource.name === name}
               onClick={() =>
                 setDataSource({
                   name,

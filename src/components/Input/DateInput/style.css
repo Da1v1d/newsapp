@@ -1,5 +1,6 @@
 .date_inputs {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -34,4 +35,32 @@
 
 .date_input > input:hover {
   cursor: text;
+}
+
+@media (max-width: 600px) {
+  .date_inputs {
+    justify-content: space-between;
+  }
+
+  .date_inputs input {
+    font-size: 16px;
+  }
+
+  .date_input p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .date_inputs {
+    flex-direction: column;
+  }
+  .date_inputs input {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .date_input p {
+    font-size: 32px;
+  }
 }

@@ -10,11 +10,11 @@ export const Articles = ({ loading, data, dataSource }) => {
   const articles = NEWS_URL[dataSource].entryData(data);
   return (
     <div className={`articles ${loading ? "blur" : ""}`}>
-      {articles?.map(article => (
+      {articles?.map((article, key) => (
         <Article
           fields={fields}
           img={image}
-          key={article[fields.id]}
+          key={key + article[fields.id]}
           article={article}
         />
       ))}
