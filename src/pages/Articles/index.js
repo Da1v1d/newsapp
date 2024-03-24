@@ -5,6 +5,8 @@ import { ChooseDataSource } from "components/ChooseDataSource";
 import { ArticleForm } from "components/Form/ArticleForm";
 import { Pagination } from "components/Pagination";
 
+import { NEWS_URL } from "constants/news";
+
 import { useFetchNews } from "hooks/useFetchNews";
 
 import "index.css";
@@ -31,11 +33,16 @@ export const ArticlesPage = () => {
       <div>
         {loading && "Loading..."}
         {!!error && error.toString().replace("Error: ", "")}
-        {!loading && data && (
-          <Articles data={data} dataSource={dataSource.name} />
+        {data && (
+          <>
+            <Articles data={data} dataSource={dataSource.name} />{" "}
+            <Pagination
+              total={NEWS_URL[dataSource.name].meta.total(data)}
+              dataSource={dataSource.name}
+              fetchData={fetchData}
+            />
+          </>
         )}
-
-        <Pagination dataSource={dataSource.name} fetchData={fetchData} />
       </div>
     </>
   );

@@ -15,3 +15,9 @@
   background-color: black;
   color: white;
 }
+
+@media (max-width: 490px) {
+  .badge {
+    font-size: 22px;
+  }
+}

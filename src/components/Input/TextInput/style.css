@@ -16,3 +16,13 @@ input[type="text"]:focus {
   border-bottom: 2px solid black;
   background-color: rgb(248, 248, 248);
 }
+
+@media (max-width: 490px) {
+  .text_inputs {
+    flex-direction: column;
+  }
+
+  .text_inputs input {
+    height: 50px;
+  }
+}

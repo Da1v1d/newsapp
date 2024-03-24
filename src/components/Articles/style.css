@@ -4,3 +4,8 @@
   flex-direction: column;
   margin-top: 20px;
 }
+@media (max-width: 490px) {
+  .articles {
+    gap: 30px;
+  }
+}

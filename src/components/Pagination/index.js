@@ -6,7 +6,10 @@ import { Button } from "components/Button";
 
 import { changeQueryParam } from "utils";
 
-export const Pagination = ({ fetchData, dataSource }) => {
+import "./style.css";
+
+export const Pagination = ({ total, fetchData, dataSource }) => {
+  console.log(total);
   const [searchParams, setSearchParams] = useSearchParams();
   let page = searchParams.get("page");
 
@@ -24,13 +27,14 @@ export const Pagination = ({ fetchData, dataSource }) => {
   };
 
   return (
-    <>
-      <Button size="sm" variant="circle" onClick={previous}>
+    <div className="pagination">
+      <Button size="md" variant="circle" onClick={previous}>
         <img alt="previous" src={require("assets/icons/previous.png")} />
       </Button>
-      <Button size="sm" variant="circle" onClick={next}>
+      {page}
+      <Button size="md" variant="circle" onClick={next}>
         <img alt="next" src={require("assets/icons/next.png")} />
       </Button>
-    </>
+    </div>
   );
 };

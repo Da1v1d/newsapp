@@ -4,3 +4,13 @@ form {
   gap: 20px;
   margin-top: 20px;
 }
+
+@media (max-width: 490px) {
+  div {
+    justify-content: center;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+}

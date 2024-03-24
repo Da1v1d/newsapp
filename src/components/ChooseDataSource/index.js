@@ -6,9 +6,9 @@ import "./style.css";
 
 export const ChooseDataSource = ({ dataSource, setDataSource }) => {
   return (
-    <>
+    <div className="choose_data_source">
       <h2> Choose Data source </h2>
-      <div className="choose_data_source">
+      <div className="choose_data_source_options">
         {Object.entries(NEWS_URL).map(([name, { queryParams }]) => {
           return (
             <Badge
@@ -26,6 +26,6 @@ export const ChooseDataSource = ({ dataSource, setDataSource }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };

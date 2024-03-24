@@ -17,6 +17,9 @@ export const NEWS_URL = {
       author: null,
       content: "abstract",
     },
+    meta: {
+      total: data => data?.response?.meta?.hits,
+    },
     queryParams: {
       search: "&q=",
       page: "&page=",
@@ -35,7 +38,10 @@ export const NEWS_URL = {
       id: "id",
       img: null,
       author: null,
-      content: null,
+      content: "webTitle",
+    },
+    meta: {
+      total: data => data?.response?.total,
     },
     queryParams: {
       search: "&q=",
@@ -56,6 +62,9 @@ export const NEWS_URL = {
       img: "urlToImage",
       author: "author",
       content: "content",
+    },
+    meta: {
+      total: data => data.totalResults,
     },
     queryParams: {
       search: "&q=",

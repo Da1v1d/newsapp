@@ -1,7 +1,6 @@
 .date_inputs {
   display: flex;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 20px;
 }
 
 .date_input {
@@ -10,10 +9,11 @@
   align-items: center;
 }
 
-.date_input > input {
+.date_input input {
   padding: 10px;
   user-select: none !important;
   color: white;
+  font-weight: bold;
   background-color: black;
   text-transform: uppercase;
   border-radius: 10px;
@@ -34,4 +34,15 @@
 
 .date_input > input:hover {
   cursor: text;
+}
+
+@media (max-width: 490px) {
+  .date_inputs {
+    justify-content: space-around;
+    gap: 40px;
+  }
+
+  .date_input p {
+    font-size: 16px;
+  }
 }

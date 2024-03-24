@@ -1,4 +1,25 @@
 .choose_data_source {
   display: flex;
-  gap: 5px;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.choose_data_source_options {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 571px) {
+  .choose_data_source {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 490px) {
+  h2 {
+    text-align: center;
+  }
+  .choose_data_source_options {
+    justify-content: center;
+  }
 }
