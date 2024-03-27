@@ -26,8 +26,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 It's a simple Dockerfile for running app.
 
+Run Docker
+
 ```bash
-  sudo docker build . -t <YOUR_IMAGE_NAME>
+  sudo docker-compose up --build -d to build and run in detached mode
 ```
 
 Check your created image
@@ -36,14 +38,8 @@ Check your created image
   sudo docker images
 ```
 
-Run Docker image
+Stop Docker
 
 ```bash
-  sudo docker run -d -p 3000:3000 <YOUR_IMAGE_NAME>
-```
-
-Stop Docker image
-
-```bash
-  sudo docker stop <RUNNED_CONTAINER_ID>
+  sudo docker-compose down
 ```
